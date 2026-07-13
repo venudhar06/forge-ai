@@ -39,24 +39,33 @@ function Hero() {
           and answer questions about your project.
         </p>
 
-        {/* Buttons */}
-        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">
+       {/* Buttons */}
+<div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">
 
-          <button className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-500 transition">
+  <button
+    onClick={() =>
+      document
+        .getElementById("features")
+        ?.scrollIntoView({ behavior: "smooth" })
+    }
+    className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-500 transition"
+  >
+    Get Started
+    <ArrowRight size={18} />
+  </button>
 
-            Get Started
+  <button
+    onClick={() =>
+      document
+        .getElementById("demo")
+        ?.scrollIntoView({ behavior: "smooth" })
+    }
+    className="rounded-xl border border-gray-700 px-8 py-4 text-white font-semibold hover:border-blue-500 hover:bg-blue-500/10 transition"
+  >
+    Watch Demo
+  </button>
 
-            <ArrowRight size={18} />
-
-          </button>
-
-          <button className="rounded-xl border border-gray-700 px-8 py-4 text-white font-semibold hover:border-blue-500 hover:bg-blue-500/10 transition">
-
-            Watch Demo
-
-          </button>
-
-        </div>
+</div>
 
       </div>
 

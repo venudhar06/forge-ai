@@ -42,7 +42,10 @@ function Features() {
   ];
 
   return (
-    <section className="bg-[#030712] py-24 px-6">
+    <section
+  id="features"
+  className="bg-[#030712] py-24 px-6"
+>
 
       <div className="max-w-7xl mx-auto">
 
