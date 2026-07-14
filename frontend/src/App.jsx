@@ -1,20 +1,29 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import HowItWorks from "./components/HowItWorks";
-import DemoPreview from "./components/DemoPreview";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
+import DashboardPage from "./pages/DashboardPage";
+import RepositoryPage from "./pages/RepositoryPage";
+import ChatPage from "./pages/ChatPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="bg-[#030712]">
-      <Navbar />
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <DemoPreview />
-      <Footer />
-    </div>
+    <Routes>
+
+      <Route path="/" element={<LandingPage />} />
+
+      <Route path="/login" element={<LoginPage />} />
+
+      <Route path="/dashboard" element={<DashboardPage />} />
+
+      <Route path="/repository/:id" element={<RepositoryPage />} />
+
+      <Route path="/chat" element={<ChatPage />} />
+
+      <Route path="*" element={<NotFound />} />
+
+    </Routes>
   );
 }
 
