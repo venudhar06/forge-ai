@@ -1,18 +1,18 @@
 import Sidebar from "../components/dashboard/Sidebar";
-
+import Topbar from "../components/dashboard/Topbar";
+import UploadCard from "../components/dashboard/UploadCard";
 function DashboardPage() {
   return (
-    <div className="flex bg-[#030712] min-h-screen">
+    <div className="flex min-h-screen bg-[#030712]">
 
       <Sidebar />
 
-      <div className="flex-1 flex items-center justify-center">
+      <main className="flex-1 p-8">
 
-        <h1 className="text-5xl font-bold text-white">
-          Dashboard
-        </h1>
+        <Topbar />
+        <UploadCard/>
 
-      </div>
+      </main>
 
     </div>
   );
