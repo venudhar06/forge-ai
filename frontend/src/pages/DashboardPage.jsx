@@ -2,6 +2,7 @@ import Sidebar from "../components/dashboard/Sidebar";
 import Topbar from "../components/dashboard/Topbar";
 import UploadCard from "../components/dashboard/UploadCard";
 import RecentRepositories from "../components/dashboard/RecentRepositories";
+import AIInsights from "../components/dashboard/AIInsights";
 function DashboardPage() {
   return (
     <div className="flex min-h-screen bg-[#030712]">
@@ -13,6 +14,7 @@ function DashboardPage() {
         <Topbar />
         <UploadCard/>
 <RecentRepositories/>
+<AIInsights/>
       </main>
 
     </div>
