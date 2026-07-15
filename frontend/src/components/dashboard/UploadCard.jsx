@@ -1,5 +1,6 @@
 import { Upload, FolderGit2 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function UploadCard() {
   return (
     <div className="mt-8 rounded-2xl border border-gray-800 bg-[#111827] p-8">
@@ -26,21 +27,21 @@ function UploadCard() {
 
       <div className="mt-8 flex flex-wrap gap-5">
 
-        <button className="flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-4 text-white font-semibold hover:bg-blue-500 transition">
+        <Link
+  to="/upload"
+  className="flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-4 text-white font-semibold hover:bg-blue-500 transition"
+>
+  <FaGithub size={22} />
+  Connect GitHub
+</Link>
 
-          <FaGithub size={22} />
-
-          Connect GitHub
-
-        </button>
-
-        <button className="flex items-center gap-3 rounded-xl border border-gray-700 px-6 py-4 text-gray-300 hover:bg-gray-800 transition">
-
-          <Upload size={22} />
-
-          Upload ZIP
-
-        </button>
+        <Link
+  to="/upload"
+  className="flex items-center gap-3 rounded-xl border border-gray-700 px-6 py-4 text-gray-300 hover:bg-gray-800 transition"
+>
+  <Upload size={22} />
+  Upload ZIP
+</Link>
 
       </div>
 

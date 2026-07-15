@@ -7,6 +7,7 @@ import RepositoryPage from "./pages/RepositoryPage";
 import ChatPage from "./pages/ChatPage";
 import NotFound from "./pages/NotFound";
 import SignupPage from "./pages/SignupPage";
+import RepositoryUploadPage from "./pages/RepositoryUploadPage";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
 
       <Route path="*" element={<NotFound />} />
       <Route path="/signup" element={<SignupPage />} />
-
+<Route path="/upload" element={<RepositoryUploadPage />} />
     </Routes>
   );
 }
