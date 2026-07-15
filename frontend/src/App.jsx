@@ -6,6 +6,7 @@ import DashboardPage from "./pages/DashboardPage";
 import RepositoryPage from "./pages/RepositoryPage";
 import ChatPage from "./pages/ChatPage";
 import NotFound from "./pages/NotFound";
+import SignupPage from "./pages/SignupPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/chat" element={<ChatPage />} />
 
       <Route path="*" element={<NotFound />} />
+      <Route path="/signup" element={<SignupPage />} />
 
     </Routes>
   );

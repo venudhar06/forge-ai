@@ -1,11 +1,12 @@
 
 
 import { useState } from "react";
-import { Mail, Lock, Eye, EyeOff } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false);
+import { User,Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+
+function SignupPage() {
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#030712] flex">
@@ -39,14 +40,30 @@ function LoginPage() {
       <div className="w-full lg:w-1/2 flex items-center justify-center px-6">
         <div className="w-full max-w-md rounded-3xl border border-gray-800 bg-[#111827] p-10 shadow-2xl">
           <h2 className="text-4xl font-bold text-white text-center">
-            Welcome Back
+            Create Account
           </h2>
 
           <p className="text-gray-400 text-center mt-3">
-            Sign in to continue to Forge AI
+            Create your Forge AI account
           </p>
 
           <form className="mt-8 space-y-6">
+              {/* Full Name */}
+
+  <div>
+    <label className="text-sm text-gray-300">Full Name</label>
+
+    <div className="mt-2 flex items-center rounded-xl border border-gray-700 bg-[#0F172A] px-4 py-3 focus-within:border-blue-500">
+
+      <User size={20} className="text-gray-400"/>
+
+      <input
+        className="ml-3 w-full bg-transparent outline-none text-white"
+        placeholder="John Doe"
+      />
+
+    </div>
+  </div>
             <div>
               <label className="text-sm text-gray-300">Email Address</label>
               <div className="mt-2 flex items-center rounded-xl border border-gray-700 bg-[#0F172A] px-4 py-3 focus-within:border-blue-500">
@@ -68,21 +85,21 @@ function LoginPage() {
     <Lock size={20} className="text-gray-400 flex-shrink-0" />
 
     <input
-      type={showPassword ? "text" : "password"}
+      type={showConfirmPassword ? "text" : "password"}
       placeholder="••••••••"
       className="ml-3 flex-1 bg-transparent text-white placeholder-gray-500 outline-none"
     />
 
     <button
       type="button"
-      onClick={() => setShowPassword(!showPassword)}
+      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
       className="ml-2 flex h-10 w-10 items-center justify-center rounded-lg text-gray-400 hover:bg-gray-700 hover:text-white transition"
     >
-      {showPassword ? (
-        <EyeOff size={20} />
-      ) : (
-        <Eye size={20} />
-      )}
+      {showConfirmPassword ? (
+    <EyeOff size={20}/>
+) : (
+    <Eye size={20}/>
+)}
     </button>
 
   </div>
@@ -100,7 +117,7 @@ function LoginPage() {
             </div>
 
             <button className="w-full rounded-xl bg-blue-600 py-4 text-white font-semibold hover:bg-blue-500 transition">
-              Continue
+              Create Account
             </button>
 
             <div className="flex items-center gap-4">
@@ -113,16 +130,17 @@ function LoginPage() {
               type="button"
               className="w-full flex items-center justify-center gap-3 rounded-xl border border-gray-700 py-4 text-white hover:bg-gray-800 transition">
               <FaGithub size={22}/>
-              Continue with GitHub
+              Sign up with GitHub
             </button>
 
             <p className="text-center text-gray-400">
-              Don't have an account?
-              <Link
-  to="/signup"
-  className="ml-2 text-blue-400 hover:text-blue-300"
+             Already have an account?
+
+<Link
+    to="/login"
+    className="ml-2 text-blue-400 hover:text-blue-300"
 >
-  Create Account
+    Login
 </Link>
             </p>
 
@@ -136,4 +154,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default SignupPage;
