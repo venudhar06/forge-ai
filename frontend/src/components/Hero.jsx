@@ -1,4 +1,6 @@
+
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -42,17 +44,13 @@ function Hero() {
        {/* Buttons */}
 <div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">
 
-  <button
-    onClick={() =>
-      document
-        .getElementById("features")
-        ?.scrollIntoView({ behavior: "smooth" })
-    }
-    className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-500 transition"
-  >
-    Get Started
-    <ArrowRight size={18} />
-  </button>
+ <Link
+  to="/login"
+  className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-500 transition"
+>
+  Get Started
+  <ArrowRight size={18} />
+</Link>
 
   <button
     onClick={() =>
