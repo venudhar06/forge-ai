@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030712] px-6">
+    <section
+  id="home"
+  className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030712] px-6"
+>
 
       {/* Background Glow */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-blue-600/20 blur-[120px] rounded-full"></div>

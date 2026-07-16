@@ -9,7 +9,9 @@ import ChatPage from "./pages/ChatPage";
 import NotFound from "./pages/NotFound";
 import SignupPage from "./pages/SignupPage";
 import RepositoryUploadPage from "./pages/RepositoryUploadPage";
-
+import SettingsPage from "./pages/SettingsPage";
+import DocumentationPage from "./pages/DocumentationPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 function App() {
   return (
     <Routes>
@@ -26,11 +28,19 @@ function App() {
     element={<RepositoryDetailsPage />}
 />
 
-      <Route path="/chat" element={<ChatPage />} />
+      <Route
+    path="/ai-chat"
+    element={<ChatPage />}
+/>
 
       <Route path="*" element={<NotFound />} />
       <Route path="/signup" element={<SignupPage />} />
 <Route path="/upload" element={<RepositoryUploadPage />} />
+<Route path="/settings" element={<SettingsPage />} />
+
+<Route path="/documentation" element={<DocumentationPage />} />
+
+<Route path="/forgot-password" element={<ForgotPasswordPage />} />
     </Routes>
   );
 }

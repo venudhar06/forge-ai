@@ -6,7 +6,9 @@ function DemoPreview() {
       id="demo"
       className="bg-[#030712] py-28 px-6"
     >
-      <div className="max-w-7xl mx-auto">
+      <div 
+      id="docs" 
+      className="max-w-7xl mx-auto">
 
         <h2 className="text-5xl font-black text-white text-center">
           See Forge AI in Action
