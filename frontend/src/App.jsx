@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
-import RepositoryPage from "./pages/RepositoryPage";
+
+import RepositoryDetailsPage from "./pages/RepositoryDetailsPage";
 import ChatPage from "./pages/ChatPage";
 import NotFound from "./pages/NotFound";
 import SignupPage from "./pages/SignupPage";
@@ -19,7 +20,11 @@ function App() {
 
       <Route path="/dashboard" element={<DashboardPage />} />
 
-      <Route path="/repository/:id" element={<RepositoryPage />} />
+      
+      <Route
+    path="/repository/:id"
+    element={<RepositoryDetailsPage />}
+/>
 
       <Route path="/chat" element={<ChatPage />} />
 

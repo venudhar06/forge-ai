@@ -1,11 +1,9 @@
 import { useState } from "react";
-
-import UploadHeader from "../components/repository/UploadHeader";
-import UploadTabs from "../components/repository/UploadTabs";
-
-import GitHubPanel from "../components/repository/GitHubPanel";
-import URLPanel from "../components/repository/URLPanel";
-import ZIPPanel from "../components/repository/ZIPPanel";
+import UploadHeader from "../components/repository/upload/UploadHeader";
+import UploadTabs from "../components/repository/upload/UploadTabs";
+import GitHubPanel from "../components/repository/upload/GitHubPanel";
+import URLPanel from "../components/repository/upload/URLPanel";
+import ZIPPanel from "../components/repository/upload/ZIPPanel";
 
 function RepositoryUploadPage() {
 
