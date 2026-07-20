@@ -12,6 +12,8 @@ import RepositoryUploadPage from "./pages/RepositoryUploadPage";
 import SettingsPage from "./pages/SettingsPage";
 import DocumentationPage from "./pages/DocumentationPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import CodeViewerPage from "./pages/CodeViewerPage";
+import ArchitecturePage from "./pages/ArchitecturePage";
 function App() {
   return (
     <Routes>
@@ -41,6 +43,11 @@ function App() {
 <Route path="/documentation" element={<DocumentationPage />} />
 
 <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+ <Route path="/code-viewer" element={<CodeViewerPage />} />
+    <Route
+    path="/architecture"
+    element={<ArchitecturePage />}
+/>
     </Routes>
   );
 }

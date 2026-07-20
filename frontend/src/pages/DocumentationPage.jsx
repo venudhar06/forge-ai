@@ -1,22 +1,41 @@
-function DocumentationPage() {
+import DocumentationHeader from "../components/documentation/DocumentationHeader";
+import DocumentationSidebar from "../components/documentation/DocumentationSidebar";
+import DocumentationContent from "../components/documentation/DocumentationContent";
+import TableOfContents from "../components/documentation/TableOfContents";
+import DocumentationActions from "../components/documentation/DocumentationActions";
+
+export default function DocumentationPage() {
   return (
-    <div className="min-h-screen bg-[#030712] flex items-center justify-center">
-      <div className="rounded-3xl border border-gray-800 bg-[#111827] p-12 text-center shadow-2xl">
-        <h1 className="text-5xl font-bold text-white">
-          Documentation
-        </h1>
+    <div className="min-h-screen bg-slate-950">
+      <div className="flex h-screen flex-col">
+        {/* Header */}
+        <div className="border-b border-slate-800 bg-slate-950 px-6 pt-6">
+          <DocumentationHeader />
+        </div>
 
-        <p className="mt-4 text-gray-400">
-          AI-generated documentation, README, API references and
-          installation guides will appear here.
-        </p>
+        {/* Main Workspace */}
+        <main className="flex flex-1 gap-6 overflow-hidden p-6">
+          {/* Sidebar */}
+          <div className="w-72 flex-shrink-0">
+            <DocumentationSidebar />
+          </div>
 
-        <div className="mt-8 inline-block rounded-full bg-blue-600 px-5 py-2 text-white">
-          Coming Soon
+          {/* Documentation */}
+          <div className="flex-1 overflow-hidden">
+            <DocumentationContent />
+          </div>
+
+          {/* Table of Contents */}
+          <div className="w-72 flex-shrink-0">
+            <TableOfContents />
+          </div>
+        </main>
+
+        {/* Bottom Actions */}
+        <div className="border-t border-slate-800 px-6 pb-6">
+          <DocumentationActions />
         </div>
       </div>
     </div>
   );
 }
-
-export default DocumentationPage;
