@@ -6,7 +6,7 @@ import DashboardPage from "./pages/DashboardPage";
 
 import RepositoryDetailsPage from "./pages/RepositoryDetailsPage";
 import ChatPage from "./pages/ChatPage";
-import NotFound from "./pages/NotFound";
+
 import SignupPage from "./pages/SignupPage";
 import RepositoryUploadPage from "./pages/RepositoryUploadPage";
 import SettingsPage from "./pages/SettingsPage";
@@ -16,6 +16,11 @@ import CodeViewerPage from "./pages/CodeViewerPage";
 import ArchitecturePage from "./pages/ArchitecturePage";
 import ProfilePage from "./pages/ProfilePage";
 import AnalysisDashboardPage from "./pages/AnalysisDashboardPage";
+import NotificationsPage from "./pages/NotificationsPage";
+import SearchPage from "./pages/SearchPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ServerErrorPage from "./pages/ServerErrorPage";
+import UnauthorizedPage from "./pages/UnauthorizedPage";
 function App() {
   return (
     <Routes>
@@ -40,13 +45,26 @@ function App() {
     element={<ChatPage />}
 />
 
-      <Route path="*" element={<NotFound />} />
+      
       <Route path="/signup" element={<SignupPage />} />
 <Route path="/upload" element={<RepositoryUploadPage />} />
 <Route path="/settings" element={<SettingsPage />} />
 
 <Route path="/documentation" element={<DocumentationPage />} />
+<Route
+  path="/500"
+  element={<ServerErrorPage />}
+/>
 
+<Route
+  path="/401"
+  element={<UnauthorizedPage />}
+/>
+
+<Route
+  path="*"
+  element={<NotFoundPage />}
+/>
 <Route path="/forgot-password" element={<ForgotPasswordPage />} />
  <Route path="/code-viewer" element={<CodeViewerPage />} />
     <Route
@@ -56,6 +74,14 @@ function App() {
 <Route
   path="/profile"
   element={<ProfilePage />}
+/>
+<Route
+  path="/notifications"
+  element={<NotificationsPage />}
+/>
+<Route
+  path="/search"
+  element={<SearchPage />}
 />
     </Routes>
   );
