@@ -14,6 +14,8 @@ import DocumentationPage from "./pages/DocumentationPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import CodeViewerPage from "./pages/CodeViewerPage";
 import ArchitecturePage from "./pages/ArchitecturePage";
+import ProfilePage from "./pages/ProfilePage";
+import AnalysisDashboardPage from "./pages/AnalysisDashboardPage";
 function App() {
   return (
     <Routes>
@@ -23,7 +25,10 @@ function App() {
       <Route path="/login" element={<LoginPage />} />
 
       <Route path="/dashboard" element={<DashboardPage />} />
-
+<Route
+    path="/analysis"
+    element={<AnalysisDashboardPage />}
+/>
       
       <Route
     path="/repository/:id"
@@ -47,6 +52,10 @@ function App() {
     <Route
     path="/architecture"
     element={<ArchitecturePage />}
+/>
+<Route
+  path="/profile"
+  element={<ProfilePage />}
 />
     </Routes>
   );
